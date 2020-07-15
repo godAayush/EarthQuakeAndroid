@@ -15,6 +15,8 @@
  */
 package com.example.android.miwok;
 
+import android.content.Context;
+
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -26,11 +28,11 @@ import androidx.fragment.app.FragmentPagerAdapter;
  */
 public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
 
-    private String tabTitles[] = new String[] { "NUMBERS", "FAMILY", "COLORS", "PHRASES" };
+    private Context mContext;
 
-    public SimpleFragmentPagerAdapter(FragmentManager fm) {
+    public SimpleFragmentPagerAdapter(Context con,FragmentManager fm) {
         super(fm);
-
+        mContext = con;
     }
 
     @Override
@@ -55,6 +57,14 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
-        return tabTitles[position];
+        if (position == 0) {
+            return mContext.getString(R.string.category_numbers);
+        } else if (position == 1) {
+            return mContext.getString(R.string.category_family);
+        } else if (position == 2) {
+            return mContext.getString(R.string.category_colors);
+        } else {
+            return mContext.getString(R.string.category_phrases);
+        }
     }
 }
