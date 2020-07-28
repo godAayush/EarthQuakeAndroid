@@ -8,7 +8,7 @@ from the U.S. Geological Survey (USGS) organization.
 More info on the USGS Earthquake API available at:
 https://earthquake.usgs.gov/fdsnws/event/1/
 
-![alt text](https://i.ibb.co/kBrhg5z/Screenshot-299.png)
+![alt text](https://i.ibb.co/3F0JcmW/Screenshot-303.png)
 
 Pre-requisites
 --------------
